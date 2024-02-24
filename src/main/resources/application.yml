@@ -1,0 +1,16 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          demo:
+            client-id: "{application-client-id}"
+            client-secret: "{client-secret}"
+            redirect-uri: "https://localhost:8443/login/oauth2/code/{registrationId}"
+            scope:
+            - openid
+            - email
+            - profile
+        provider:
+          demo: 
+            issuer-uri: https://login.microsoftonline.com/{tenant-id}/v2.0
